@@ -22,14 +22,11 @@ namespace Assignment1_S19
             printTriangle(n4);
 
             Console.ReadKey();
-            //int[] num = { 1, 1, 1, 3, 3, 4, 5, 6, 7, 0 };
-
+            
             int[] arr = new int[] { 1, 2, 3, 2, 2, 1, 3, 2 };
             computeFrequency(arr);
 
             Console.ReadKey();
-
-            // write your self-reflection here as a comment
         }
         //Question 1
         public static void printPrimeNumbers(int x, int y)
@@ -127,19 +124,26 @@ namespace Assignment1_S19
             try
             {
                 int[] arr = new int[10];
+                int i, j;
 
-                for (int x = 0; x < 10; x++)
+                for (i = 0; i < 10; i++)
                 {
-                    for (int y = 0; y < a.Length; y++)
+                    for (j = 0; j < a.Length; j++)
                     {
-                        if (a[y] == x)
-                            arr[x]++;
+                        if (a[j] == i)
+                            arr[i]++;
                     }
                 }
-          
-                Console.WriteLine("Number "+ "Frequency");
-                    for (int x = 0; x < 10; x++)
-                    Console.WriteLine( x +"      "+ arr[x]);
+
+                Console.WriteLine("Number " + "Frequency");
+
+                for (i = 0; i < 10; i++)
+                {
+                    if (arr[i] > 0)
+                    {
+                        Console.WriteLine(i + "      " + arr[i]);
+                    }
+                }
             }
             catch
             {
